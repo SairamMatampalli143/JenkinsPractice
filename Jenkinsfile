@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker {
-                    image 'maven:3.3.3'
-                }
+                echo "Hello World"
             }
             steps {
                 echo 'Building...'
