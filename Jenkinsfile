@@ -1,12 +1,12 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.3.3'
-            label 'my-label'
-        }
-    }
+    agent none
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'maven:3.3.3'
+                }
+            }
             steps {
                 echo 'Building...'
             }
