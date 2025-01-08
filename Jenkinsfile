@@ -1,13 +1,11 @@
 pipeline {
-    agent none
-    stages {
-        stage('Build') {
-            agent {
-                echo "Hello World"
-            }
-            steps {
-                echo 'Building...'
-            }
-        }
+  agent any
+  stages {
+    stage('Hello') {
+      steps {
+        sh 'echo Hello World'
+        echo "Build number is ${currentBuild.number}"
+      }
     }
+  }
 }
